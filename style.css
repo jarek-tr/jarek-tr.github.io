@@ -38,6 +38,27 @@ a:hover {
   text-decoration: underline;
 }
 
+a:focus-visible {
+  outline: 3px solid var(--accent-light);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 24px;
+  top: -48px;
+  padding: 10px 14px;
+  background: var(--text);
+  color: #fff;
+  border-radius: 4px;
+  z-index: 200;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
 /* ─── Navigation ─── */
 nav {
   position: sticky;
@@ -119,6 +140,10 @@ nav {
   margin-bottom: 12px;
 }
 
+.subtitle span {
+  display: block;
+}
+
 .hero-links {
   display: flex;
   gap: 16px;
@@ -144,6 +169,10 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 24px;
+}
+
+main:focus {
+  outline: none;
 }
 
 section {
@@ -246,9 +275,17 @@ li {
   color: var(--text-secondary);
 }
 
-/* ─── CV Download ─── */
-.cv-download {
-  display: inline-block;
+/* ─── Document Downloads ─── */
+.document-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.document-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 24px;
   background: var(--accent);
   color: #fff;
@@ -257,7 +294,7 @@ li {
   transition: background 0.15s;
 }
 
-.cv-download:hover {
+.document-download:hover {
   background: var(--accent-light);
   text-decoration: none;
   color: #fff;
@@ -328,5 +365,17 @@ footer a:hover {
 
   .year {
     min-width: unset;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

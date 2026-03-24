@@ -7,18 +7,21 @@
   <meta name="description" content="Jarek Reynolds is a PhD student in Computer Science at CU Boulder researching disability-centered computer vision and human-centered perception.">
   <meta property="og:title" content="Jarek Reynolds — PhD Student, CU Boulder">
   <meta property="og:description" content="PhD student in Computer Science at CU Boulder researching disability-centered computer vision and human-centered perception.">
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/25602410?v=4">
+  <meta property="og:image" content="https://jarek-tr.github.io/25602410.jpeg">
   <meta property="og:url" content="https://jarek-tr.github.io">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://jarek-tr.github.io/25602410.jpeg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <!-- ─── Navigation ─── -->
-<nav>
+<nav aria-label="Primary">
   <div class="nav-inner">
-    <a href="#" class="nav-name">Jarek Reynolds</a>
+    <a href="#hero" class="nav-name">Jarek Reynolds</a>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#research">Research</a>
@@ -32,10 +35,13 @@
 <!-- ─── Hero ─── -->
 <header id="hero">
   <div class="hero-inner">
-    <img src="https://avatars.githubusercontent.com/u/25602410?v=4" alt="Jarek Reynolds" class="headshot">
+    <img src="25602410.jpeg" alt="Portrait of Jarek Reynolds" class="headshot">
     <div class="hero-text">
       <h1>Jarek Reynolds</h1>
-      <p class="subtitle">PhD Student, Computer Science<br>University of Colorado Boulder</p>
+      <p class="subtitle">
+        <span>PhD Student, Computer Science</span>
+        <span>University of Colorado Boulder</span>
+      </p>
       <div class="hero-links">
         <a href="mailto:jarek.reynolds@colorado.edu">Email</a>
         <a href="https://scholar.google.com/citations?user=BypC2fgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
@@ -45,7 +51,7 @@
   </div>
 </header>
 
-<main>
+<main id="main-content" tabindex="-1">
 
 <!-- ─── About ─── -->
 <section id="about">
@@ -173,7 +179,10 @@
 <!-- ─── CV ─── -->
 <section id="cv">
   <h2>Curriculum Vitae</h2>
-  <p><a href="student_cv.pdf" class="cv-download" download>Download CV (PDF)</a></p>
+  <div class="document-links">
+    <a href="student_cv.pdf" class="document-download" download>Download CV (PDF)</a>
+    <a href="student_resume.pdf" class="document-download" download>Download Resume (PDF)</a>
+  </div>
 </section>
 
 </main>
